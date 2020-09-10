@@ -6,43 +6,55 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   </head>
 <body>
+
 <div class="container">
 
   <nav class="nav"> 
-    <div class="nav-menu">
-        <div class="nav-menu__logo">
-        <img class="nav-menu__logo-img" src="../public/images/github_logo_black.svg" alt="Github Jobs"> <p class="nav-menu__logo-text">Jobs</p>
+  <div class="nav-menu">
+    <div class="nav-menu__logo">
+        <img class="nav-menu__logo-img" src="../public/images/GitHub_Logo_White.png" alt="Github Jobs"> 
     </div>
+    <p class="nav-menu__logo-text">Jobs</p>
 </div>
 </nav>
 
-<div class="container">
-
-<h1>Bienvenido al portal de empleos de Github</h1>
-<p>Selecciona los parametros de búsqueda</p>
-
-<div class="contenedor-formulario">
-
-<form class="form" method="GET">
-  <label for="pais">País</label>
+<div class="form-container">
+<div class="textos">
+<h2>Bienvenido al portal de empleos de Github</h2>
+<p>Selecciona parámetros de búsqueda</p>
+</div>
+<form class="form-inline" action="">
+  <div class="input-group">
+  <label for="ubicacion">Ubicación</label><br>
   <select id="pais" name="pais">
-    <option value="0" selected disabled>Seleccione un país</option>
+    <option value="0" selected disabled>Seleccione país</option>
     <option value="usa">Estados Unidos</option>
     <option value="canada">Canadá</option>
   </select>
+  </div>
 
-  <label for="afinidad">Afinidad</label>
-  <select id="afinidad" name="afinidad">
-    <option value="0" selected disabled>Selecciona afinidad</option>
-    <option value="usa">Estados Unidos</option>
-    <option value="canada">Canadá</option>
+  <div class="input-group">
+  <label for="trabajo">Puesto de trabajo</label><br>
+  <select id="trabajo" name="trabajo">
+    <option value="0" selected disabled>Seleccione puesto de trabajo</option>
+    <option value="usa">Developer</option>
+    <option value="canada">TI</option>
+    <option value="canada">UX</option>
+    <option value="canada">Python</option>
+    <option value="canada">Javascript</option>
+    <option value="canada">PHP</option>   
   </select>
+</div>
 
-  <input type="submit">
+<div class="form-button">
+  <br>
+  <button type="submit">Buscar empleo</button>
+</div>
 </form>
-
-</div>
 </div>
 
+<hr class="division">
+
+<script src="../public/actions/jobs.js"></script>
 </body>
 </html>

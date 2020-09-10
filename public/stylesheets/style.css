@@ -13,19 +13,18 @@ body {
   height: 5rem;
   display: flex;
   padding: 0.9375rem 3em;
-  background-color:#c9e2f1;
+  background-color:dodgerblue;
   align-items: center;
 }
 
 .nav-menu {
   display: flex;
+  justify-content: center;
   margin-left: 0;
 }
 
 .nav-menu__logo {
-  float: left;
   cursor: pointer;
-  padding-right: 0.625rem;
 }
 
 .nav-menu__logo img{
@@ -35,19 +34,85 @@ body {
 }
 
 .nav-menu__logo-text{
-display:inline-block;
+  font-weight: 400;
+  font-size: 21px;
+  display:inline-block;
+  align-self: center;
+  color:#fff;
+  justify-self: center;
 }
 
-.formulario{
+.form-container{
+  width:80%;
   margin:auto;
-  width: 90%;
-  padding: 0.9375rem 3em;
 }
 
-h1{
+.form-inline {  
+  margin:auto;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 25px;
+}
+
+.form-inline label {
+  margin: 5px 10px 5px 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.form-inline select {
+  vertical-align: middle;
+  margin: 5px 10px 5px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  width: 300px;
+}
+
+.form-inline button {
+  padding: 10px 20px;
+  background-color: dodgerblue;
+  border: 1px solid #ddd;
+  color: white;
+  cursor: pointer;
+}
+
+.form-inline button:hover {
+  background-color: royalblue;
+}
+
+@media (max-width: 800px) {
+  .form-inline input {
+    margin: 10px 0;
+  }
+  
+  .form-inline{
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+.input-group{
+  padding:15px;
+}
+
+h2{
   text-align: center;
+  font-weight: 400;
 }
 
 p{
   text-align: center;
+  font-weight: 300;
+}
+
+.textos{
+  padding:15px;
+  padding-top: 25px;
+}
+
+.division{
+  width:100%;
 }
