@@ -7,6 +7,7 @@ var cors = require("cors");
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
+var jobsRouter = require("./routes/jobs");
 
 var app = express();
 //Import the mongoose module
@@ -35,8 +36,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
+app.use('/public', express.static(__dirname + '/public'));
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
+app.use ("/jobs", jobsRouter);
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
   next(createError(404));
