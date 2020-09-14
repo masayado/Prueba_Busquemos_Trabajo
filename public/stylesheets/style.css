@@ -6,6 +6,7 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
 }
 
 .nav {
@@ -43,7 +44,7 @@ body {
 }
 
 .form-container{
-  width:80%;
+  width:65%;
   margin:auto;
 }
 
@@ -68,7 +69,7 @@ body {
   padding: 10px;
   background-color: #fff;
   border: 1px solid #ddd;
-  width: 300px;
+  width: 250px;
 }
 
 .form-inline button {
@@ -95,16 +96,20 @@ body {
 }
 
 .input-group{
-  padding:15px;
+  padding:10px;
 }
 
 h2{
-  text-align: center;
+  position: relative;
+  left:65px;
+  text-align: left;
   font-weight: 400;
 }
 
 p{
-  text-align: center;
+  position: relative;
+  left: 65px;
+  text-align: left;
   font-weight: 300;
 }
 
@@ -115,4 +120,12 @@ p{
 
 .division{
   width:100%;
+}
+
+.jobs-container{
+  padding:25px;
+  display:grid;
+  height:auto;
+  grid-template-columns:  1fr 1fr 1fr 3fr;
+  grid-template-rows: 1 / 2;
 }
