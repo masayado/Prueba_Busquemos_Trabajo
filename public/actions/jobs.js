@@ -1,23 +1,25 @@
-const BASE_URL = "https://corsanywhere.herokuapp.com/https://jobs.github.com/positions.json?"
+const BASE_URL = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?"
 
 //evento button
 $(function () {
     $("#buscar").click(function (e) {
-      e.preventDefault(); 
+    getJobs();
+      e.preventDefault();
       var pais = $("#pais").find(":selected").text();
       var afinidad= $("#trabajo").find(":selected").text();
-      console.log(afinidad , pais)
+      console.log(pais, afinidad) //funciona
     });   
 });
 
 function getJobs(type,location){
     axios.get(`${BASE_URL}description=${type}&location=${location}`)
-        .then((resp)=>{
+        .then((response)=>{
             //
-            resp.data.forEach((job)=>{
+        console.log(response);
+            response.data.forEach((job)=>{
                 printJob(job);
             })
-            console.log(resp);
+            console.log(response);
         })
         .catch((error)=>{
             console.log(error);
