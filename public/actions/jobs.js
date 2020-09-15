@@ -1,25 +1,30 @@
 const BASE_URL = "https://cors-anywhere.herokuapp.com/https://jobs.github.com/positions.json?"
+var country = $("#country").find(":selected").text();
+var affinity = $("#affinity").find(":selected").text();
 
-$(function (){
-    getJobs("python","usa"); //esta trayendo la data
-});
+//$(function (){
+   //getJobs("python","usa"); //esta trayendo la data
+//});
 
-//evento button
+//evento button - trae la data con el form 
 $(function () {
-    $("#buscar_empleo").click(function (e) {
+    $("#findJob").click(function (e) {
       e.preventDefault();
-      var pais = $("#pais").find(":selected").text();
-      var afinidad= $("#trabajo").find(":selected").text();
-      console.log(pais, afinidad) //funciona!
+      var country = $("#pais").find(":selected").text();
+      var affinity = $("#trabajo").find(":selected").text();
+      console.log(affinity, country) //funciona!
+      getJobs(affinity, country)
     });   
 });
 
 function getJobs(type, location){
     axios.get(`${BASE_URL}description=${type}&location=${location}`)
     .then((resp)=>{
-        //
+
+    $('#jobs_container').empty()
+      
     resp.data.forEach((job)=>{
-        printJob(job);
+        printJob(job); //se imprime la data
     })
     console.log(resp);
     })
@@ -49,8 +54,9 @@ function printJob(job){
         </div>
         <hr>
         <p class="card-text">${job.description}</p>
+        <p class="card-text">${job.how_to_apply}</p>
       </div>
   </div>
      `
-        $('#jobs_container').append(content);
+    $('#jobs_container').append(content);
 }
