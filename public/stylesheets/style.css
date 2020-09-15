@@ -143,3 +143,9 @@ p{
   strong{
     font-weight:normal;
   }
+
+  .link_jobs{
+    margin: 0 auto;
+    padding:20px;
+    text-align: center;
+  }

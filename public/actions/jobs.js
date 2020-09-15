@@ -54,7 +54,7 @@ function printJob(job){
         </div>
         <hr>
         <p class="card-text">${job.description}</p>
-        <p class="card-text">${job.how_to_apply}</p>
+        <p class="card-text">How to apply: ${job.how_to_apply}</p>
       </div>
   </div>
      `
